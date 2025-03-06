@@ -4,87 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cyberpunk Registration Form</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Courier New', monospace;
-    }
-
-    body {
-      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
-    }
-
-    .register-container {
-      width: 400px;
-      padding: 40px;
-      border-radius: 15px;
-      background: rgba(0, 0, 0, 0.8);
-      box-shadow: 0 0 20px #ff007f;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 28px;
-      text-transform: uppercase;
-      color: #ff007f;
-    }
-
-    input {
-      width: 100%;
-      padding: 12px;
-      margin: 12px 0;
-      border: none;
-      border-radius: 8px;
-      background: #222;
-      color: #fff;
-      font-size: 16px;
-    }
-
-    input::placeholder {
-      color: #888;
-    }
-
-    #strength-bar {
-      height: 10px;
-      width: 100%;
-      border-radius: 5px;
-      margin-top: 5px;
-      background: #444;
-      overflow: hidden;
-    }
-
-    #strength-bar div {
-      height: 100%;
-      width: 0%;
-      background: red;
-      transition: width 0.3s;
-    }
-
-    button {
-      width: 100%;
-      padding: 12px;
-      margin-top: 20px;
-      border: none;
-      border-radius: 10px;
-      background: #ff007f;
-      color: #000;
-      font-size: 18px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #ff4da6;
-    }
-  </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -99,29 +19,6 @@
       <button type="submit">Sign Up</button>
     </form>
   </div>
-
-  <script>
-    const password = document.getElementById('password');
-    const strengthBar = document.querySelector('#strength-bar div');
-
-    password.addEventListener('input', () => {
-      const val = password.value;
-      let strength = 0;
-
-      if (val.length >= 6) strength += 20;
-      if (/[A-Z]/.test(val)) strength += 20;
-      if (/[0-9]/.test(val)) strength += 20;
-      if (/[^A-Za-z0-9]/.test(val)) strength += 20;
-      if (val.length >= 12) strength += 20;
-
-      strengthBar.style.width = strength + '%';
-
-      if (strength <= 40) strengthBar.style.background = 'red';
-      else if (strength <= 60) strengthBar.style.background = 'orange';
-      else if (strength <= 80) strengthBar.style.background = 'yellow';
-      else strengthBar.style.background = '#00e600';
-    });
-  </script>
-
+<script src="script.js"></script>
 </body>
 </html>

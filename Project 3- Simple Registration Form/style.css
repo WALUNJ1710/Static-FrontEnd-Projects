@@ -2,83 +2,78 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Orbitron', sans-serif;
-}
+    font-family: 'Courier New', monospace;
+  }
 
-body{
+  body {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #ff00cc,#3333ff);
-}
+    color: #fff;
+  }
 
-.register-container{
+  .register-container {
     width: 400px;
     padding: 40px;
+    border-radius: 15px;
     background: rgba(0, 0, 0, 0.8);
-    border-radius: 20px;
-    box-shadow: 0 0 30px #ff00cc;
-}
+    box-shadow: 0 0 20px #ff007f;
+  }
 
-h2 {
+  h2 {
     text-align: center;
-    color: #fff;
     margin-bottom: 30px;
-    text-shadow: 0 0 10px #ff00cc;
-}
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #ff007f;
+  }
 
-input{
+  input {
     width: 100%;
     padding: 12px;
     margin: 12px 0;
+    border: none;
     border-radius: 8px;
-    border: 1px solid #ff00cc;
-    background: rgba(255, 255, 255, 0.1);
+    background: #222;
     color: #fff;
     font-size: 16px;
-}
+  }
 
-input:placeholder {
-    color: #ff99dd;
-}
+  input::placeholder {
+    color: #888;
+  }
 
-input:focus {
-    outline: none;
-    border-color: #ffcc00;
-    box-shadow: 0 0 15px #ffcc00;
-}
-#strengthBar {
-    width: 100%;
+  #strength-bar {
     height: 10px;
-    background: #444;
+    width: 100%;
     border-radius: 5px;
-    overflow: hidden;
     margin-top: 5px;
-}
+    background: #444;
+    overflow: hidden;
+  }
 
-#strength {
+  #strength-bar div {
     height: 100%;
-    width: 0;
-    background: #ff0000;
-    transition: 0.3s;
-}
+    width: 0%;
+    background: red;
+    transition: width 0.3s;
+  }
 
-button {
+  button {
     width: 100%;
     padding: 12px;
     margin-top: 20px;
     border: none;
     border-radius: 10px;
-    background: #ff00cc;
+    background: #ff007f;
     color: #000;
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
-}
+  }
 
-button:hover {
-    background: #ffcc00;
-    box-shadow: 0 0 20px #ffcc00;
-}
+  button:hover {
+    background: #ff4da6;
+  }
